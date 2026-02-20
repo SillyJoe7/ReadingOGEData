@@ -60,9 +60,9 @@ namespace ReadingOGEData
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string WorkEmail { get; set; }
-        public string CloudLifecycleState { get; set; }
+        public bool CloudLifecycleState { get; set; }
         public string IdentityID { get; set; }
-        public string IsManager { get; set; }
+        public bool IsManager { get; set; }
         public string Department { get; set; }
         public string JobTitle { get; set; }
         public string Uid { get; set; }
