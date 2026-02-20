@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\beaub\\OneDrive\\Desktop\\Beaubockusgithubprojects\\ReadingOGEData\\ReadingOGEData.csproj": {}
+    "C:\\Users\\bb1045011\\Desktop\\assignments\\ReadingOGEDataOfAwesomeness\\ReadingOGEData\\ReadingOGEData.csproj": {}
   },
   "projects": {
-    "C:\\Users\\beaub\\OneDrive\\Desktop\\Beaubockusgithubprojects\\ReadingOGEData\\ReadingOGEData.csproj": {
+    "C:\\Users\\bb1045011\\Desktop\\assignments\\ReadingOGEDataOfAwesomeness\\ReadingOGEData\\ReadingOGEData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\beaub\\OneDrive\\Desktop\\Beaubockusgithubprojects\\ReadingOGEData\\ReadingOGEData.csproj",
+        "projectUniqueName": "C:\\Users\\bb1045011\\Desktop\\assignments\\ReadingOGEDataOfAwesomeness\\ReadingOGEData\\ReadingOGEData.csproj",
         "projectName": "ReadingOGEData",
-        "projectPath": "C:\\Users\\beaub\\OneDrive\\Desktop\\Beaubockusgithubprojects\\ReadingOGEData\\ReadingOGEData.csproj",
-        "packagesPath": "C:\\Users\\beaub\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\beaub\\OneDrive\\Desktop\\Beaubockusgithubprojects\\ReadingOGEData\\obj\\",
+        "projectPath": "C:\\Users\\bb1045011\\Desktop\\assignments\\ReadingOGEDataOfAwesomeness\\ReadingOGEData\\ReadingOGEData.csproj",
+        "packagesPath": "C:\\Users\\bb1045011\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bb1045011\\Desktop\\assignments\\ReadingOGEDataOfAwesomeness\\ReadingOGEData\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\beaub\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bb1045011\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

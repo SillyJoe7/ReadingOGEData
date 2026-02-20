@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace ReadingOGEData
 {
@@ -10,6 +11,16 @@ namespace ReadingOGEData
         {
             List<OGERecord> data = Read();
             Console.WriteLine("Total records: " + data.Count);
+
+            List<OGERecord> inactiveRecords = data.Where(r => r.CloudLifecycleState == "inactive").ToList();
+            Console.WriteLine("Number of inactive records:" + inactiveRecords.Count);
+
+            List<string> inactiveNames = inactiveRecords.Select(r => r.DisplayName).Distinct().OrderBy(name => name).ToList();
+            Console.WriteLine("Inactive Users:");
+            foreach (var name in inactiveNames)
+            {
+                Console.WriteLine(name);
+            }
         }
 
         public static List<OGERecord> Read()
@@ -60,9 +71,9 @@ namespace ReadingOGEData
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string WorkEmail { get; set; }
-        public bool CloudLifecycleState { get; set; }
+        public string CloudLifecycleState { get; set; }
         public string IdentityID { get; set; }
-        public bool IsManager { get; set; }
+        public string IsManager { get; set; }
         public string Department { get; set; }
         public string JobTitle { get; set; }
         public string Uid { get; set; }
