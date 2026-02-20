@@ -21,7 +21,21 @@ namespace ReadingOGEData
             {
                 Console.WriteLine(name);
             }
-        }
+
+            var groupedInactive = inactiveRecords.GroupBy(r => r.DisplayName);
+            Console.WriteLine("Inactive Users and Their Access:");
+                foreach (var group in groupedInactive)
+                {
+                    Console.WriteLine($"User: {group.Key}");
+                    var accesses = group.Where(r => !string.IsNullOrEmpty(r.AccessType));
+                    foreach (var record in accesses)
+                    {
+                        Console.Write($"      Source: {record.AccessSourceName}");
+                        Console.WriteLine($"      Access: {record.AccessDisplayName}");
+                    }
+                }
+            }
+        
 
         public static List<OGERecord> Read()
         {
