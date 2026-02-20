@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReadingOGEData")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4cb7247e4e06530033dedb9c15606b550214836d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b938208f1cfc9083af71198cf6ef84cbf032a63")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReadingOGEData")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReadingOGEData")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

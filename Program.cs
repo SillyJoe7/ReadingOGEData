@@ -14,27 +14,38 @@ namespace ReadingOGEData
 
         public static List<OGERecord> Read()
         {
-            string filePath = "ogedata.csv";
+            string path = "ogedata.csv";
             List<OGERecord> records = new List<OGERecord>();
 
-            using StreamReader reader = new StreamReader(filePath);
+            using StreamReader s = new StreamReader(path);
 
-            reader.ReadLine(); // Skip header row
+            //This skips the header cause im #awesome
+            s.ReadLine();
+            
 
             string line;
 
-            while ((line = reader.ReadLine()) != null)
+            while ((line = s.ReadLine()) != null)
             {
-                string[] words = line.Split(',');
+                string[] parts = line.Split(',');
 
-                // ⚠️ Adjust number of columns if needed
-                OGERecord record = new OGERecord(
-                    words[0],
-                    words[1],
-                    words[2],
-                    words[3],
-                    words[4]
-                );
+                OGERecord record = new OGERecord
+                {
+                    DisplayName = parts[0],
+                    FirstName = parts[1],
+                    LastName = parts[2],
+                    WorkEmail = parts[3],
+                    CloudLifecycleState = parts[4],
+                    IdentityID = parts[5],
+                    IsManager = parts[6],
+                    Department = parts[7],
+                    JobTitle = parts[8],
+                    Uid = parts[9],
+                    AccessType = parts[10],
+                    AccessSourceName = parts[11],
+                    AccessDisplayName = parts[12],
+                    AccessDescription = parts[13]
+                };
 
                 records.Add(record);
             }
@@ -45,19 +56,19 @@ namespace ReadingOGEData
 
     public struct OGERecord
     {
-        public OGERecord(string col1, string col2, string col3, string col4, string col5)
-        {
-            Column1 = col1;
-            Column2 = col2;
-            Column3 = col3;
-            Column4 = col4;
-            Column5 = col5;
-        }
-
-        public string Column1 { get; }
-        public string Column2 { get; }
-        public string Column3 { get; }
-        public string Column4 { get; }
-        public string Column5 { get; }
+        public string DisplayName { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string WorkEmail { get; set; }
+        public string CloudLifecycleState { get; set; }
+        public string IdentityID { get; set; }
+        public string IsManager { get; set; }
+        public string Department { get; set; }
+        public string JobTitle { get; set; }
+        public string Uid { get; set; }
+        public string AccessType { get; set; }
+        public string AccessSourceName { get; set; }
+        public string AccessDisplayName { get; set; }
+        public string AccessDescription { get; set; }
     }
 }
