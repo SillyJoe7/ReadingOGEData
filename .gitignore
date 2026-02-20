@@ -1,0 +1,30 @@
+## --- C# / .NET ESSENTIALS ---
+[Dd]ebug/
+[Rr]elease/
+bin/
+obj/
+publish/
+*.exe
+*.dll
+*.pdb
+*.nupkg
+## --- VS CODE SPECIFIC ---
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+## --- USER SPECIFIC / CACHE ---
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+.idea/
+## --- PACKAGES ---
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
