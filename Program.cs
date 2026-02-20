@@ -24,17 +24,26 @@ namespace ReadingOGEData
 
             var groupedInactive = inactiveRecords.GroupBy(r => r.DisplayName);
             Console.WriteLine("Inactive Users and Their Access:");
-                foreach (var group in groupedInactive)
+            foreach (var group in groupedInactive)
+            {
+                Console.WriteLine($"User: {group.Key}");
+                var accesses = group.Where(r => !string.IsNullOrEmpty(r.AccessType));
+                foreach (var record in accesses)
                 {
-                    Console.WriteLine($"User: {group.Key}");
-                    var accesses = group.Where(r => !string.IsNullOrEmpty(r.AccessType));
-                    foreach (var record in accesses)
-                    {
-                        Console.Write($"      Source: {record.AccessSourceName}");
-                        Console.WriteLine($"      Access: {record.AccessDisplayName}");
-                    }
+                    Console.Write($"      Source: {record.AccessSourceName}");
+                    Console.WriteLine($"      Access: {record.AccessDisplayName}");
                 }
             }
+
+            var departments = data.Select(r => r.Department).Where(d => !string.IsNullOrEmpty(d)).Distinct().OrderBy(d => d).ToList();
+            Console.WriteLine("Departments:");
+            foreach (var dept in departments)
+            {
+                Console.WriteLine(dept);
+            }
+                
+            
+        }
         
 
         public static List<OGERecord> Read()
